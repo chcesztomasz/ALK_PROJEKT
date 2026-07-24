@@ -18,7 +18,7 @@ def health_check():
 
 @app.get("/version")
 def version():
-    return {"version": "1.0.0"}
+    return {"version": "1.0.1"}
 
 @app.post("/calculate")
 def calculate(req: CalculateRequest):
