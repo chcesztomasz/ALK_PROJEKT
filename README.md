@@ -28,7 +28,9 @@ Prosta aplikacja REST API napisana w języku Python (FastAPI), konteneryzowana p
 
 ## Wdrożenie w chmurze (Terraform)
 
-Wdrożenie wymaga uwierzytelnienia w AWS (np. poprzez zainstalowane i skonfigurowane poleceniem `aws configure` AWS CLI lokalnie).
+Do obsługi projektu należy utworzyć nowego użytkownika w AWS IAM oraz wygenerować Access keys.
+Wdrożenie wymaga uwierzytelnienia w AWS za pomocą powyższego użytkownika (np. poprzez zainstalowane i skonfigurowane poleceniem `aws configure` AWS CLI lokalnie).
+
 
 ```bash
 cd terraform
@@ -37,9 +39,15 @@ terraform apply -auto-approve
 ```
 *Pierwsze wdrożenie utworzy repozytorium ECR oraz przygotuje ECS. Kontener może początkowo być w stanie 'pending' aż do momentu zbudowania obrazu przez GitHub Actions.*
 
+Aby wycofać wdrożenie i zwolnić zasoby AWS wykonujemy polecenie
+
+```bash
+terraform destroy -auto-approve
+```
+
 ## Konfiguracja CI/CD (GitHub Actions)
 
-Aby zautomatyzować proces, należy dodać 2 sekrety (Repository Secrets) w ustawieniach repozytorium na GitHubie (`Settings` -> `Secrets and variables` -> `Actions`):
+Aby zautomatyzować proces, należy dodać 2 sekrety utowrzonego wcześniej użytkownika w AWS IAM (Repository Secrets) w ustawieniach repozytorium na GitHubie (`Settings` -> `Secrets and variables` -> `Actions`):
 *   `AWS_ACCESS_KEY_ID`: Twój identyfikator klucza dostępu.
 *   `AWS_SECRET_ACCESS_KEY`: Twój tajny klucz.
 
