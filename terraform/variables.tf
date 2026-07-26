@@ -5,5 +5,5 @@ variable "aws_region" {
 
 variable "project_name" {
   type    = string
-  default = "alk-devops-project"
+  default = "alk-devops-project-tj"
 }

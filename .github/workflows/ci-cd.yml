@@ -10,10 +10,10 @@ on:
 
 env:
   AWS_REGION: us-east-1
-  ECR_REPOSITORY: alk-devops-project-repo
-  ECS_CLUSTER: alk-devops-project-cluster
-  ECS_SERVICE: alk-devops-project-service
-  ECS_TASK_DEFINITION: alk-devops-project-task
+  ECR_REPOSITORY: alk-devops-project-tj-repo
+  ECS_CLUSTER: alk-devops-project-tj-cluster
+  ECS_SERVICE: alk-devops-project-tj-service
+  ECS_TASK_DEFINITION: alk-devops-project-tj-task
 
 jobs:
   test:
