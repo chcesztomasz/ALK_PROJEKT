@@ -4,7 +4,7 @@ Prosta aplikacja REST API napisana w języku Python (FastAPI), konteneryzowana p
 
 ## Architektura rozwiązania
 
-*   **Aplikacja:** Python + FastAPI (endpointy: `/health`, `/version`, `/calculate`).
+*   **Aplikacja:** Python + FastAPI (endpointy: `/health`, `/version`, `/calculate`, `/docs`).
 *   **Repozytorium:** GitHub.
 *   **CI/CD:** GitHub Actions (automatyczne uruchamianie testów, budowanie obrazu Docker, wrzucanie do AWS ECR i aktualizowanie usługi AWS ECS).
 *   **Chmura (AWS):**
