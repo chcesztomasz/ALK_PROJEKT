@@ -1,4 +1,4 @@
-# Projekt Zaliczeniowy DevOps - Calculator API
+# ALK projekt Zaliczeniowy DevOps - Calculator API
 
 Prosta aplikacja REST API napisana w języku Python (FastAPI), konteneryzowana przy użyciu platformy Docker i wdrożona na AWS ECS z wykorzystaniem Terraform (IaC) i GitHub Actions (CI/CD).
 
