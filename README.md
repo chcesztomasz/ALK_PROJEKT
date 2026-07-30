@@ -47,7 +47,7 @@ terraform destroy -auto-approve
 
 ## Konfiguracja CI/CD (GitHub Actions)
 
-Aby zautomatyzować proces, należy dodać 2 sekrety utowrzonego wcześniej użytkownika w AWS IAM (Repository Secrets) w ustawieniach repozytorium na GitHubie (`Settings` -> `Secrets and variables` -> `Actions`):
+Aby zautomatyzować proces, należy wykorzystać utworzonego wcześniej użytkownika w AWS IAM (Repository Secrets) i dodać 2 sekrety w ustawieniach repozytorium na GitHubie (`Settings` -> `Secrets and variables` -> `Actions`):
 *   `AWS_ACCESS_KEY_ID`: Twój identyfikator klucza dostępu.
 *   `AWS_SECRET_ACCESS_KEY`: Twój tajny klucz.
 
@@ -55,4 +55,4 @@ Po dodaniu sekretów, każde zatwierdzenie kodu (commit) i wypchnięcie zmian na
 
 ## Link do działającej aplikacji
 
-> [TUTAJ WPISZ PUBLICZNY ADRES IP Z AWS ECS, np. http://X.X.X.X:8000/health ]
+> http://X.X.X.X:8000/health
