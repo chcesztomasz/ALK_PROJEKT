@@ -55,4 +55,4 @@ Po dodaniu sekretów, każde zatwierdzenie kodu (commit) i wypchnięcie zmian na
 
 ## Link do działającej aplikacji
 
-> http://X.X.X.X:8000/health
+> http://100.26.138.171:8000/version
